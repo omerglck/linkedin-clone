@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="index.html" class="logo"
+          ><img src="images/logo.png" alt="logo"
+        /></a>
+
+        <div class="search-box">
+          <img src="images/search.png" alt="search" />
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbar-center">
+        <ul>
+          <li>
+            <a href="#" class="active-link"
+              ><img src="images/home.png" /><span>Ana Sayfa</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/network.png" /><span>Bağlantılarım</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/jobs.png" /><span>İş İlanları</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/message.png" /><span>Mesajlaşma</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/notification.png" /><span>Bildirimler</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <div class="online">
+          <img
+            src="images/user-1.png"
+            alt="profile"
+            class="nav-profile-img"
+            onclick="toggleMenu()"
+          />
+        </div>
+      </div>
+
+      <!--profile drowdown menu-->
+      <div class="profile-menu-wrap" id="profileMenu">
+        <div class="profile-menu">
+          <div class="user-info">
+            <img src="images/user-1.png" />
+            <div>
+              <h3>Rayan Walton</h3>
+              <a href="#">See your profile</a>
+            </div>
+          </div>
+          <hr />
+          <a href="#" class="profile-menu-link">
+            <img src="images/feedback.png" alt="" />
+            <p>Give Feedback</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/setting.png" alt="" />
+            <p>Settings & Privacy</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/help.png" alt="" />
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/display.png" alt="" />
+            <p>Display & Accessibility</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/logout.png" alt="" />
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!--  -->
+    <div class="container">
+      <!--! left-sidebar-->
+      <div class="left-sidebar">
+        <div class="sidebar-profile-box">
+          <img src="images/cover-pic.png" alt="cover" width="100%" />
+          <div class="sidebar-profile-info">
+            <img src="images/user-1.png" alt="user-1" />
+            <h1>Raya Walton</h1>
+            <h3>Web Developer at Microsoft</h3>
+            <ul>
+              <li>Your profile views<span>52</span></li>
+              <li>Your post views<span>810</span></li>
+              <li>Your connections views<span>205</span></li>
+            </ul>
+          </div>
+          <div class="sidebar-profile-link">
+            <a href="#"><img src="images/items.png" />My items</a>
+            <a href="#"><img src="images/premium.png" />Try Premium</a>
+          </div>
+        </div>
+        <div class="sidebar-activity" id="sidebarActivity">
+          <h3>RECENT</h3>
+          <a href="#"
+            ><img src="images/recent.png" alt="recent" />Web Development</a
+          >
+          <a href="#"
+            ><img src="images/recent.png" alt="recent" />User Interface</a
+          >
+          <a href="#"
+            ><img src="images/recent.png" alt="recent" />Online Learning</a
+          >
+          <a href="#"
+            ><img src="images/recent.png" alt="recent" />Learn Online</a
+          >
+          <a href="#"
+            ><img src="images/recent.png" alt="recent" />Code Better</a
+          >
+          <a href="#"
+            ><img src="images/recent.png" alt="recent" />Group Learning</a
+          >
+          <h3>GROUPS</h3>
+          <a href="#"
+            ><img src="images/group.png" alt="recent" />Web Desing Group
+          </a>
+          <a href="#"
+            ><img src="images/group.png" alt="recent" />HTML & CSS Learners
+          </a>
+          <a href="#"
+            ><img src="images/group.png" alt="recent" />Python & Javascript
+            Group
+          </a>
+          <a href="#"
+            ><img src="images/group.png" alt="recent" />Learn Coding Online
+          </a>
+          <h3>HASHTAG</h3>
+          <a href="#"
+            ><img src="images/hashtag.png" alt="recent" />webdevelopment
+          </a>
+          <a href="#"
+            ><img src="images/hashtag.png" alt="recent" />userinterface
+          </a>
+          <a href="#"
+            ><img src="images/hashtag.png" alt="recent" />onlinelearning
+          </a>
+          <div class="discover-more-link">
+            <a href="#">Discover more</a>
+          </div>
+        </div>
+        <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+      </div>
+      <!--! main-content  -->
+      <div class="main-content">
+        <div class="create-post">
+          <div class="create-post-input">
+            <img src="images/user-1.png" />
+            <textarea rows="2" placeholder="Write a post"></textarea>
+          </div>
+
+          <div class="create-post-links">
+            <li><img src="images/photo.png" />Photo</li>
+            <li><img src="images/video.png" />Video</li>
+            <li><img src="images/event.png" />Event</li>
+            <li>Post</li>
+          </div>
+        </div>
+        <div class="sort-by">
+          <hr />
+          <p>
+            Sort by: <span>top <img src="images/down-arrow.png" alt="" /></span>
+          </p>
+        </div>
+
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-3.png" />
+            <div>
+              <h1>Benjamin Leo</h1>
+              <small>Founder and CEO at Gellello Group | Angel Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="images/post-image-1.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Abhinav mishra and 75 others</span>
+            </div>
+            <div><span>22 comment &middot; 40 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-4.png" />
+            <div>
+              <h1>Clarence George</h1>
+              <small>Founder and CEO at Gellello Group | Angel Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="images/post-image-2.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Abhinav mishra and 75 others</span>
+            </div>
+            <div><span>22 comment &middot; 40 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-5.png" />
+            <div>
+              <h1>Benjamin Leo</h1>
+              <small>Founder and CEO at Gellello Group | Angel Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="images/post-image-3.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Abhinav mishra and 75 others</span>
+            </div>
+            <div><span>22 comment &middot; 40 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-2.png" />
+            <div>
+              <h1>Benjamin Leo</h1>
+              <small>Founder and CEO at Gellello Group | Angel Investor</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="images/post-image-4.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Abhinav mishra and 75 others</span>
+            </div>
+            <div><span>22 comment &middot; 40 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--! right-sidebar  -->
+      <div class="right-sidebar">
+        <div class="sidebar-news">
+          <img src="images/more.png" alt="more" class="info-icon" />
+          <h3>Trending News</h3>
+          <a href="#">High demand for skilled manpower</a>
+          <span> 1d ago &middot; 10,934 readers</span>
+
+          <a href="#">Carreers growing horizontally too</a>
+          <span> 19d ago &middot; 1,552 readers</span>
+
+          <a href="#">Less work visa for US, more for UK</a>
+          <span>1d ago &middot; 27,290 readers</span>
+
+          <a href="#">More hiring = higher confidence?</a>
+          <span>18d ago &middot; 8,208 readers</span>
+
+          <a href="#">Gautam Adani is the world's third richest</a>
+          <span>12d ago &middot; 4,205 readers</span>
+
+          <a href="#" class="read-more-link">Read More</a>
+        </div>
+        <div class="sidebar-ad">
+          <small>Ad &middot; &middot; &middot;</small>
+          <p>Master the 5 priciples of web design</p>
+          <div>
+            <img src="images/user-1.png" />
+            <img src="images/mi-logo.png" />
+          </div>
+          <b>Brand and Demand in Xiaomi</b>
+          <a href="#" class="ad-link">Learn More</a>
+        </div>
+        <div class="sidebar-useful-links">
+          <a href="#">About</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Advertisting</a>
+          <a href="#">Get the App</a>
+          <a href="#">More</a>
+
+          <div class="copyright-msg">
+            <img src="images/logo.png" />
+            <p>Linkedup &#169; 2023. All right reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let profileMenu = document.getElementById("profileMenu");
+      function toggleMenu() {
+        profileMenu.classList.toggle("open-menu");
+      }
+    </script>
+    <script>
+      let sidectivity = document.getElementById("sidebarActivity");
+      let moreLink = document.getElementById("showMoreLink");
+      function toggleActivity() {
+        sidectivity.classList.toggle("open-activity");
+      }
+    </script>
+  </body>
+</html>
